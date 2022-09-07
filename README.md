@@ -27,12 +27,11 @@ or Octave).
 
 ### Solution
 
-Write your solution here.  Note, in the past, we've used a full, graphical
-version of Linux.  With WSL, you probably don't have as direct a path for
-exploring software in the Software Manager.  However, use the power of
-Google (or AskJeeves) to explore what sorts of open-source software is out
-there for technical or other applications.
-
+Krita is an open-source software I used to use for image editing and digital drawing before I started using
+a paid software. It possesses similar basic features compared to paid software like Photoshop and Paint Tool SAI,
+and actually has some features unique to it like multiple built-in engines for brushes (although Photoshop and SAI
+have features unique to them as well). Being open-source, it also supports add-ins in the form of Python plug-ins.
+One such plugin I looked allows for the execution of bash commands and programs on currently open images in Krita.
 
 ## Problem 3 -- Your CPU
 
@@ -48,10 +47,7 @@ using `ls > directory_contents.txt` to dump the contents of a directory to a fil
 
 To display CPU information, I used the following command:
 
-```bash
-ls -al # <--- that's not right, but it shows you how to include
-       #      code in Markdown!
-```
+lscpu			# <-- Using this command displays info such as the CPU's model, MHz, and # of threads and cores.
 
 ## Problem 4 -- Resource Hogs
 
@@ -63,7 +59,7 @@ in your writeup.
 
 ### Solution
 
-
+ps aux			# <-- CPU usage is under "%CPU", while Memory usage is under "%MEM".
 
 ## Problem 5 -- `bash`
 
@@ -74,3 +70,8 @@ Where is `bash` located on your Linux system?  And what version of
 determine this information.
 
 ### Solution
+
+cd /			# <-- move to root directory
+which bash		# <-- locate the directory bash is located: "/usr/bin/bash"
+cd /usr/bin		# <-- move to the directory containing bash
+bash -- version	# <-- check bash's version information (current version: GNU bash, version 5.0.16(1)-release (x86_64-pc-linux-gnu))
